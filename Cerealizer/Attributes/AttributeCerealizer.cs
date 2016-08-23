@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 
@@ -12,15 +13,16 @@ namespace Cerealizer.Attributes
 
         public byte[] Serialize(object obj)
         {
-            var bytes = new ArraySegment<byte>();
+            var byteLists = new List<byte[]>();
             var props = this.GetTypeCache(obj.GetType());
+
             foreach (var prop in props)
             {
                 var value = prop.Item1.GetValue(obj);
                 var data = prop.Item2.Serialize(value);
-                // TODO: add to array
+                byteLists.Add(data);
             }
-            return null;
+            return this.Combine(byteLists.ToArray());
         }
 
 
@@ -35,6 +37,20 @@ namespace Cerealizer.Attributes
                 prop.Item1.SetValue(obj, value);
             }
             return obj;
+        }
+
+
+        protected virtual byte[] Combine(params byte[][] arrays)
+        {
+            var rv = new byte[arrays.Sum(a => a.Length)];
+            var offset = 0;
+
+            foreach (byte[] array in arrays)
+            {
+                Buffer.BlockCopy(array, 0, rv, offset, array.Length);
+                offset += array.Length;
+            }
+            return rv;
         }
 
 

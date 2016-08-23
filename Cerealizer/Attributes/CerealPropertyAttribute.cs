@@ -17,6 +17,12 @@ namespace Cerealizer.Attributes
 
         public virtual byte[] Serialize(object value)
         {
+            // TODO: nullables
+            var type = value.GetType();
+            if (type == typeof(int))
+                return BitConverter.GetBytes((int)value);
+
+
             return null;
         }
 
@@ -47,7 +53,6 @@ namespace Cerealizer.Attributes
         }
 
 
-        //public virtual byte[] ToBuffer(PropertyInfo property, object obj)
         public int StartIndex { get; }
         public int Length { get; }
     }

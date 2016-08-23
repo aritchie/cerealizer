@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Cerealizer</id>
-        <version>1.0.0-beta1</version>
+        <version>0.0.1</version>
         <title>Cereal buffer parsing</title>
         <description>Buffer parsing framework</description>
         <authors>Allan Ritchie</authors>
