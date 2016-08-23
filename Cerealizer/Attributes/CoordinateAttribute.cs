@@ -14,7 +14,7 @@ namespace Cerealizer.Attributes
         }
 
 
-        public override object Parse(PropertyInfo property, byte[] data)
+        public override object Deserialize(PropertyInfo property, byte[] data)
         {
             return BitConverter.ToInt32(data, this.StartIndex) / MILLIARCSECONDS_TO_DEGREES;
         }

@@ -15,7 +15,13 @@ namespace Cerealizer.Attributes
         }
 
 
-        public virtual object Parse(PropertyInfo property, byte[] data)
+        public virtual byte[] Serialize(object value)
+        {
+            return null;
+        }
+
+
+        public virtual object Deserialize(PropertyInfo property, byte[] data)
         {
                 //var part = data
                 //    .Skip(prop.Item2.StartIndex)
@@ -33,6 +39,9 @@ namespace Cerealizer.Attributes
 
             if (property.PropertyType == typeof(ushort))
                 return BitConverter.ToInt16(data, this.StartIndex);
+
+            if (property.PropertyType == typeof(string))
+                return BitConverter.ToString(data, this.StartIndex, this.Length);
 
             throw new ArgumentException($"Cannot parse this type - {property.PropertyType}");
         }

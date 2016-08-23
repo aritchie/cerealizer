@@ -12,6 +12,14 @@ namespace Cerealizer.Attributes
 
         public byte[] Serialize(object obj)
         {
+            var bytes = new ArraySegment<byte>();
+            var props = this.GetTypeCache(obj.GetType());
+            foreach (var prop in props)
+            {
+                var value = prop.Item1.GetValue(obj);
+                var data = prop.Item2.Serialize(value);
+                // TODO: add to array
+            }
             return null;
         }
 
@@ -23,7 +31,7 @@ namespace Cerealizer.Attributes
 
             foreach (var prop in props)
             {
-                var value = prop.Item2.Parse(prop.Item1, data);
+                var value = prop.Item2.Deserialize(prop.Item1, data);
                 prop.Item1.SetValue(obj, value);
             }
             return obj;

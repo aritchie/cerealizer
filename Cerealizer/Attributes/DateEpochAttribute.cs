@@ -14,7 +14,7 @@ namespace Cerealizer.Attributes
         }
 
 
-        public override object Parse(PropertyInfo property, byte[] data)
+        public override object Deserialize(PropertyInfo property, byte[] data)
         {
             var seconds = Math.Abs(BitConverter.ToUInt32(data, this.StartIndex));
             var value = UnixEpoch.AddSeconds(seconds);

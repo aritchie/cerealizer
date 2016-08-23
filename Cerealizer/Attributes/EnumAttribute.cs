@@ -11,7 +11,7 @@ namespace Cerealizer.Attributes
         }
 
 
-        public override object Parse(PropertyInfo property, byte[] data)
+        public override object Deserialize(PropertyInfo property, byte[] data)
         {
             var enumValue = Enum.ToObject(property.PropertyType, data[this.StartIndex]);
             return enumValue;
