@@ -6,7 +6,7 @@ namespace Cerealizer.Attributes
 {
     public class EnumAttribute : CerealPropertyAttribute
     {
-        public EnumAttribute(int startIndex) : base(startIndex, 1)
+        public EnumAttribute(int startIndex) : base(startIndex)
         {
         }
 

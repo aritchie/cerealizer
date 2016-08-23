@@ -9,7 +9,7 @@ namespace Cerealizer.Attributes
         public const double MILLIARCSECONDS_TO_DEGREES = 3600000;
 
 
-        public CoordinateAttribute(int startIndex) : base(startIndex, 4)
+        public CoordinateAttribute(int startIndex) : base(startIndex)
         {
         }
 

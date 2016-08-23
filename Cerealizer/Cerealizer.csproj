@@ -42,6 +42,7 @@
     <Compile Include="Attributes\CoordinateAttribute.cs" />
     <Compile Include="Attributes\DateEpochAttribute.cs" />
     <Compile Include="Attributes\EnumAttribute.cs" />
+    <Compile Include="Attributes\StringAttribute.cs" />
     <Compile Include="ICerealizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
