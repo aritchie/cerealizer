@@ -3,14 +3,14 @@
     <metadata>
         <id>Cerealizer.BleExtensions</id>
         <version>0.0.1</version>
-        <title>ACR Buffer Parse - Bluetooth LE Extensions</title>
+        <title>Cerealize Bluetooth LE Extensions</title>
         <description>Buffer parsing framework BLE extensions</description>
         <authors>Allan Ritchie</authors>
         <owners>Allan Ritchie</owners>
-        <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+        <licenseUrl>https://github.com/aritchie/cerealizer/LICENSE.md</licenseUrl>
         <projectUrl>https://github.com/aritchie/cerealizer</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <tags>buffer parsing ble windows xamarin xam.pcl</tags>
+        <tags>buffers serializers</tags>
         <dependencies>
             <dependency id="Acr.Ble" version="[1, 2)" />
         </dependencies>
@@ -20,6 +20,6 @@ Initial release
         </releaseNotes>
     </metadata>
     <files>
-        <file src="..\Cerealizer.BleExtensions\bin\Release\Cerealizer.BleExtensions.dll" target="lib\portable-win+net45+wp8+win8+wpa81\" />
+        <file src="Cerealizer.BleExtensions\bin\Release\Cerealizer.BleExtensions.dll" target="lib\portable-win+net45+wp8+win8+wpa81\" />
     </files>
 </package>
