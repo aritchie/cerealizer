@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Cerealizer</id>
+        <version>1.0.0-beta1</version>
+        <title>Cereal buffer parsing</title>
+        <description>Buffer parsing framework</description>
+        <authors>Allan Ritchie</authors>
+        <owners>Allan Ritchie</owners>
+        <licenseUrl>http://opensource.org/licenses/ms-pl.html</licenseUrl>
+        <projectUrl>https://github.com/aritchie/bufferparse</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <tags>buffer parsing windows xamarin xam.pcl</tags>
+        <releaseNotes>
+1.0
+Initial release
+        </releaseNotes>
+    </metadata>
+    <files>
+        <file src="..\Cerealizer\bin\Release\Cerealizer.dll" target="lib\portable-win+net45+wp8+win8+wpa81\" />
+    </files>
+</package>
