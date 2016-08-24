@@ -38,10 +38,13 @@ namespace Cerealizer.Attributes
             if (type == typeof(ulong))
                 return BitConverter.GetBytes((ulong)value);
 
+            if (type == typeof(double))
+                return BitConverter.GetBytes((double)value);
+
+            if (type == typeof(float))
+                return BitConverter.GetBytes((float)value);
+
             throw new ArgumentException($"Cannot work with this type - {type}");
-
-
-            return null;
         }
 
 
@@ -75,6 +78,12 @@ namespace Cerealizer.Attributes
 
             if (property.PropertyType == typeof(ulong))
                 return BitConverter.ToInt64(data, this.StartIndex);
+
+            if (property.PropertyType == typeof(double))
+                return BitConverter.ToDouble(data, this.StartIndex);
+
+            if (property.PropertyType == typeof(float))
+                return BitConverter.ToSingle(data, this.StartIndex);
 
             throw new ArgumentException($"Cannot work with this type - {property.PropertyType}");
         }
