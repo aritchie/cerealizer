@@ -3,8 +3,8 @@
     <metadata>
         <id>Cerealizer</id>
         <version>0.0.2</version>
-        <title>Cereal buffer parsing</title>
-        <description>Buffer parsing framework</description>
+        <title>Cerealizer</title>
+        <description>Eats byte arrays for breakfast - lightweight and configurable buffer parsing library</description>
         <authors>Allan Ritchie</authors>
         <owners>Allan Ritchie</owners>
         <licenseUrl>https://github.com/aritchie/cerealizer/LICENSE.md</licenseUrl>

@@ -4,7 +4,7 @@
         <id>Cerealizer.BleExtensions</id>
         <version>0.0.2</version>
         <title>Cerealize Bluetooth LE Extensions</title>
-        <description>Buffer parsing framework BLE extensions</description>
+        <description>Eats BluetoothLE characteristics for breakfast - BLE extensions for Cerealizer</description>
         <authors>Allan Ritchie</authors>
         <owners>Allan Ritchie</owners>
         <licenseUrl>https://github.com/aritchie/cerealizer/LICENSE.md</licenseUrl>
