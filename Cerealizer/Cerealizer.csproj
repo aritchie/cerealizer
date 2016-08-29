@@ -38,13 +38,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Attributes\AttributeCerealizer.cs" />
-    <Compile Include="Attributes\CerealPropertyAttribute.cs" />
+    <Compile Include="Attributes\CerealAttribute.cs" />
     <Compile Include="Attributes\CoordinateAttribute.cs" />
     <Compile Include="Attributes\DateEpochAttribute.cs" />
     <Compile Include="Attributes\EnumAttribute.cs" />
+    <Compile Include="Attributes\GuidAttribute.cs" />
     <Compile Include="Attributes\StringAttribute.cs" />
+    <Compile Include="EndianBitConverter.cs" />
     <Compile Include="ICerealizer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Extensions.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
