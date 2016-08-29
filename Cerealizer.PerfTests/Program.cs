@@ -8,7 +8,7 @@ namespace Cerealizer.PerfTests
 {
     class Program
     {
-        const int runs = 1000;
+        const int runs = 100000;
 
 
         static void Main(string[] args)

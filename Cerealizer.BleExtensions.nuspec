@@ -2,13 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Cerealizer.BleExtensions</id>
-        <version>0.0.2</version>
+        <version>1.0.0</version>
         <title>Cerealize Bluetooth LE Extensions</title>
         <description>Eats BluetoothLE characteristics for breakfast - BLE extensions for Cerealizer</description>
         <authors>Allan Ritchie</authors>
         <owners>Allan Ritchie</owners>
         <licenseUrl>https://github.com/aritchie/cerealizer/LICENSE.md</licenseUrl>
         <projectUrl>https://github.com/aritchie/cerealizer</projectUrl>
+        <iconUrl>https://github.com/aritchie/cerealizer/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <tags>buffers serializers</tags>
         <dependencies>
