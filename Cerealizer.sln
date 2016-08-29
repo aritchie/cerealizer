@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cerealizer.PerfTests", "Cerealizer.PerfTests\Cerealizer.PerfTests.csproj", "{F7151267-6995-4339-B967-B2279447F509}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{D5A619B0-E7B8-4A38-9D50-ADEC0E334B91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5A619B0-E7B8-4A38-9D50-ADEC0E334B91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5A619B0-E7B8-4A38-9D50-ADEC0E334B91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7151267-6995-4339-B967-B2279447F509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7151267-6995-4339-B967-B2279447F509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7151267-6995-4339-B967-B2279447F509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7151267-6995-4339-B967-B2279447F509}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
