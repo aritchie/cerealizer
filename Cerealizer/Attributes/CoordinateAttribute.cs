@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace Cerealizer.Attributes
 {
-    public class CoordinateAttribute : CerealPropertyAttribute
+    public class CoordinateAttribute : CerealAttribute
     {
         public const double MILLIARCSECONDS_TO_DEGREES = 3600000;
 
