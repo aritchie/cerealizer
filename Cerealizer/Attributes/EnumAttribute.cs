@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace Cerealizer.Attributes
 {
-    public class EnumAttribute : CerealPropertyAttribute
+    public class EnumAttribute : CerealAttribute
     {
         public EnumAttribute(int startIndex) : base(startIndex)
         {

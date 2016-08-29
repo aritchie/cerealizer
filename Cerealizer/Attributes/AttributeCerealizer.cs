@@ -8,10 +8,10 @@ namespace Cerealizer.Attributes
 {
     public class AttributeCerealizer : ICerealizer
     {
-        static readonly IDictionary<Type, IList<Tuple<PropertyInfo, CerealPropertyAttribute>>> cache = new Dictionary<Type, IList<Tuple<PropertyInfo, CerealPropertyAttribute>>>();
+        protected static readonly IDictionary<Type, IList<Tuple<PropertyInfo, CerealAttribute>>> cache = new Dictionary<Type, IList<Tuple<PropertyInfo, CerealAttribute>>>();
 
 
-        public byte[] Serialize(object obj)
+        public virtual byte[] Serialize(object obj)
         {
             var byteLists = new List<byte[]>();
             var props = this.GetTypeCache(obj.GetType());
@@ -26,7 +26,7 @@ namespace Cerealizer.Attributes
         }
 
 
-        public T Deserialize<T>(byte[] data)
+        public virtual T Deserialize<T>(byte[] data)
         {
             var obj = Activator.CreateInstance<T>();
             var props = this.GetTypeCache(typeof(T));
@@ -54,20 +54,20 @@ namespace Cerealizer.Attributes
         }
 
 
-        IList<Tuple<PropertyInfo, CerealPropertyAttribute>> GetTypeCache(Type type)
+        IList<Tuple<PropertyInfo, CerealAttribute>> GetTypeCache(Type type)
         {
             if (cache.ContainsKey(type))
                 return cache[type];
 
             var props = type.GetRuntimeProperties();
-            var list = new List<Tuple<PropertyInfo, CerealPropertyAttribute>>();
+            var list = new List<Tuple<PropertyInfo, CerealAttribute>>();
 
             foreach (var prop in props)
             {
-                var attr = prop.GetCustomAttribute<CerealPropertyAttribute>();
+                var attr = prop.GetCustomAttribute<CerealAttribute>();
                 if (attr != null)
                 {
-                    var tuple = new Tuple<PropertyInfo, CerealPropertyAttribute>(prop, attr);
+                    var tuple = new Tuple<PropertyInfo, CerealAttribute>(prop, attr);
                     list.Add(tuple);
                 }
             }

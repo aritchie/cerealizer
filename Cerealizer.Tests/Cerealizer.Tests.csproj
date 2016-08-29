@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="AttributeCerealizerTests.cs" />
     <Compile Include="AttributeModel.cs" />
+    <Compile Include="Beacon.cs" />
+    <Compile Include="BeaconReadTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

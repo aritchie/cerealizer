@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Cerealizer.Attributes
 {
-    public class StringAttribute : CerealPropertyAttribute
+    public class StringAttribute : CerealAttribute
     {
         public StringAttribute(int startIndex, int length) : base(startIndex)
         {

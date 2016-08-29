@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace Cerealizer.Attributes
 {
-    public class DateEpochAttribute : CerealPropertyAttribute
+    public class DateEpochAttribute : CerealAttribute
     {
         static readonly DateTime UnixEpoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 
