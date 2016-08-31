@@ -8,7 +8,7 @@ namespace Cerealizer.Mapping
         readonly ICerealizer mapper;
 
 
-        public MappingCerializer(ICerealMapper mapper)
+        public MappingCerializer(CerealMapper mapper)
         {
             this.mapper = mapper;
         }

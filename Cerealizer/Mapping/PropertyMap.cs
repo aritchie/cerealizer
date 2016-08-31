@@ -3,7 +3,7 @@
 
 namespace Cerealizer.Mapping
 {
-    public interface ICerealMapper
+    public class PropertyMap
     {
     }
 }

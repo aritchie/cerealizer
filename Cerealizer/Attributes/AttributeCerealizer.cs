@@ -40,6 +40,12 @@ namespace Cerealizer.Attributes
         }
 
 
+        //public virtual int GetPacketLengthForType<T>()
+        //{
+        //    var cache = this.GetTypeCache(typeof(T));
+        //}
+
+
         protected virtual byte[] Combine(params byte[][] arrays)
         {
             var rv = new byte[arrays.Sum(a => a.Length)];
