@@ -36,11 +36,18 @@ namespace Cerealizer.BleExtensions
                 throw new ArgumentException("Characteristic does not support notification");
 
             return characteristic
-                .PeriodicRead(interval)
+                .ReadInterval(interval)
                 .Select(cerealizer.Deserialize<T>);
         }
 
 
-        //public static IObservable<object> WriteCereal
+        public static IObservable<object> WriteCereal<T>(this IGattCharacteristic characteristic, ICerealizer cerealizer, T value)
+        {
+            if (!characteristic.CanRead())
+                throw new ArgumentException("Characteristic does not support notification");
+
+            var data = cerealizer.Serialize(value);
+            return characteristic.Write(data);
+        }
     }
 }

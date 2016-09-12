@@ -6,10 +6,6 @@ namespace Cerealizer.Tests
 {
     public class AttributeModel
     {
-
-        //[BufferProperty(0, 4)]
-        //public ushort UShort { get; set; }
-
         [DateEpoch(12)] // 12-15
         public DateTime TimestampUtc { get; set; }
 

@@ -18,8 +18,8 @@ namespace Cerealizer.Attributes
             var type = value.GetType();
             this.AssertNonNullable(type);
 
-            if (type == typeof(bool) || type == typeof(byte))
-                return EndianBitConverter.GetBytes((byte)value, this.IsLittleEndian);
+            if (type == typeof(bool) || type == typeof(byte) || type == typeof(sbyte))
+                return new [] { (byte)value };
 
             if (type == typeof(short))
                 return EndianBitConverter.GetBytes((short)value, this.IsLittleEndian);
@@ -57,6 +57,9 @@ namespace Cerealizer.Attributes
                 return data[this.StartIndex] == 1;
 
             if (property.PropertyType == typeof(byte))
+                return data[this.StartIndex];
+
+            if (property.PropertyType == typeof(sbyte))
                 return data[this.StartIndex];
 
             if (property.PropertyType == typeof(short))

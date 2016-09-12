@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Cerealizer</id>
-        <version>0.1.0</version>
+        <version>1.0.0</version>
         <title>Cerealizer</title>
         <description>Eats byte arrays for breakfast - lightweight and configurable buffer parsing library</description>
         <authors>Allan Ritchie</authors>
