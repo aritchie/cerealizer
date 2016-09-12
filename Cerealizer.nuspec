@@ -9,7 +9,7 @@
         <owners>Allan Ritchie</owners>
         <licenseUrl>https://github.com/aritchie/cerealizer/LICENSE.md</licenseUrl>
         <projectUrl>https://github.com/aritchie/cerealizer</projectUrl>
-        <iconUrl>https://github.com/aritchie/cerealizer/icon.png</iconUrl>
+        <iconUrl>https://github.com/aritchie/cerealizer/raw/master/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <tags>buffers serializers</tags>
         <releaseNotes>
