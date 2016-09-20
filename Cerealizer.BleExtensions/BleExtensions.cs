@@ -8,18 +8,18 @@ namespace Cerealizer.BleExtensions
     public static class BleExtensions
     {
 
-        public static IObservable<T> WhenNotificationMessage<T>(this IGattCharacteristic characteristic, ICerealizer cerealizer)
+        public static IObservable<T> SubscribeToCharacteristic<T>(this ICerealizer cerealizer, IGattCharacteristic characteristic)
         {
             if (!characteristic.CanNotify())
                 throw new ArgumentException("Characteristic does not support notification");
 
             return characteristic
-                .WhenNotificationOccurs()
+                .SubscribeToNotifications()
                 .Select(cerealizer.Deserialize<T>);
         }
 
 
-        public static IObservable<T> WhenReadMessage<T>(this IGattCharacteristic characteristic, ICerealizer cerealizer)
+        public static IObservable<T> ReadMessage<T>(this ICerealizer cerealizer, IGattCharacteristic characteristic)
         {
             if (!characteristic.CanRead())
                 throw new ArgumentException("Characteristic does not support notification");
@@ -30,7 +30,7 @@ namespace Cerealizer.BleExtensions
         }
 
 
-        public static IObservable<T> WhenReadIntervalMessage<T>(this IGattCharacteristic characteristic, ICerealizer cerealizer, TimeSpan interval)
+        public static IObservable<T> ReadMessageInterval<T>(this ICerealizer cerealizer, IGattCharacteristic characteristic, TimeSpan interval)
         {
             if (!characteristic.CanRead())
                 throw new ArgumentException("Characteristic does not support notification");
@@ -41,7 +41,7 @@ namespace Cerealizer.BleExtensions
         }
 
 
-        public static IObservable<object> WriteCereal<T>(this IGattCharacteristic characteristic, ICerealizer cerealizer, T value)
+        public static IObservable<object> WriteMessage<T>(this ICerealizer cerealizer, IGattCharacteristic characteristic, T value)
         {
             if (!characteristic.CanRead())
                 throw new ArgumentException("Characteristic does not support notification");

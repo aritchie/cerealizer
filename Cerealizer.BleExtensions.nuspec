@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Cerealizer.BleExtensions</id>
-        <version>1.0.0</version>
+        <version>2.0.0</version>
         <title>Cerealize Bluetooth LE Extensions</title>
         <description>Eats BluetoothLE characteristics for breakfast - BLE extensions for Cerealizer</description>
         <authors>Allan Ritchie</authors>
@@ -13,12 +13,12 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <tags>buffers serializers</tags>
         <dependencies>
-            <dependency id="Acr.Ble" version="[0.9.1, 2)" />
+            <dependency id="Acr.Ble" version="[0.9.6, 2)" />
             <dependency id="Cerializer" version="[1, 2)" />
         </dependencies>
         <releaseNotes>
-1.0
-Initial release
+2.0
+Work with new BLE commands
         </releaseNotes>
     </metadata>
     <files>
