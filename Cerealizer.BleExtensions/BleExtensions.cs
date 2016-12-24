@@ -32,7 +32,7 @@ namespace Cerealizer.BleExtensions
 
             return characteristic
                 .SubscribeToNotifications()
-                .Select(cerealizer.Deserialize<T>);
+                .Select(x => cerealizer.Deserialize<T>(x.Data));
         }
 
 
@@ -59,7 +59,7 @@ namespace Cerealizer.BleExtensions
 
             return characteristic
                 .Read()
-                .Select(cerealizer.Deserialize<T>);
+                .Select(x => cerealizer.Deserialize<T>(x.Data));
         }
 
 
@@ -70,7 +70,7 @@ namespace Cerealizer.BleExtensions
 
             return characteristic
                 .ReadInterval(interval)
-                .Select(cerealizer.Deserialize<T>);
+                .Select(x => cerealizer.Deserialize<T>(x.Data));
         }
 
 
